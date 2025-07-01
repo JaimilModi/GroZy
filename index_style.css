@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9f9f1;
+  font-family: "Nunito", sans-serif;
+  color: #1b3a1b;
+}
+
+.main-header {
+  background-color: #00b894;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.8s ease-out;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo_anchor {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #e7ffd6;
+}
+
+.search-bar {
+  width: 250px;
+  padding: 8px;
+  border-radius: 1.2rem;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #1b3a1b;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.hero {
+  height: 74.7vh;
+  background-color: #e9f9f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1b3a1b;
+}
+
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.hero-img {
+  width: 300px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .hero-img {
+    margin-top: 20px;
+    width: 250px;
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+
+.cta-button {
+  background-color: #00b894;
+  color: #f5fff0;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #52e0c4;
+  color: white;
+  cursor: pointer;
+}
+
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0028b8;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 4px 10px rgba(80, 81, 81, 0.461);
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpText 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
+.delay-4 {
+  animation-delay: 1.2s;
+}
+
+.delay-4-1{
+  animation-delay: 1.4s;
+}
+
+.delay-4-2{
+  animation-delay: 1.6s;
+}
+
+.delay-4-3{
+  animation-delay: 1.8s;
+}
+
+.delay-4-4{
+  animation-delay: 2s;
+}
+
+.delay-5{
+  animation-delay: 2.3s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+footer{
+  background-color: #00b894;
+  color:white;
+  text-align: center;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  animation: slideUp 0.8s ease-out;
+}
+
+footer a {
+  margin: 0 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  color: #e7ffd6;
+}
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
