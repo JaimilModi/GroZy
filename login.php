@@ -1,3 +1,3 @@
 <?php
-    echo "<h1>Login Page</h1>";
+$con=new mysqli("localhost","root","","grozy_db");
 ?>
